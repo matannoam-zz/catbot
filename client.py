@@ -1,7 +1,7 @@
 import discord
 import asyncio
 
-from .config import TOKEN
+from config import TOKEN
 
 client = discord.Client()
 
