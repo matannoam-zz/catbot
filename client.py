@@ -14,7 +14,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith('cat'):
+    content = message.content
+    if (' cat ' in content or ' cats ' in content
+            or content.startswith('cat ') or content.startswith('cats ')
+            or content.endswith(' cat') or content.endswith(' cats')):
         await client.send_message(message.channel, 'meow meow')
 
 client.run(TOKEN)
